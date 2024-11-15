@@ -1,0 +1,1 @@
+frontend needed for wallet
