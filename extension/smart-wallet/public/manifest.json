@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "OneFi.Wallet",
+    "version": "1.0.0",
+    "description": "Wallet to Unify Assets",
+    "icons": {
+      "48": "vite.png",
+      "128": "vite.png"
+    },
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "scripting"
+    ],
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ]
+  }
