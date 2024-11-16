@@ -7,7 +7,7 @@ export class EthereumConnection{
         this.provider = new ethers.JsonRpcProvider(url);
     } 
 
-    getERC20Contract(address): ethers.Contract{
+    getERC20Contract(address:string): ethers.Contract{
         const ERC20Abi = [
             // Some details about the token
             "function name() view returns (string)",
@@ -26,13 +26,11 @@ export class EthereumConnection{
         return new ethers.Contract(address,ERC20Abi,this.provider);
     }
 
-    getContract(address, abi): ethers.Contract{
+    getContract(address:string, abi:ethers.InterfaceAbi): ethers.Contract{
         return new ethers.Contract(address,abi,this.provider);
     }
 
-    getAddressBalance(address){
-        let balance;
-        this.provider.getBalance(address).then((value=>{return value}))
-
+    getAddressBalance(address:string){
+        return this.provider.getBalance(address)
     }
 }
