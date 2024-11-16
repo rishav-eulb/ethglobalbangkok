@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import { chainsConfig } from "./chainConfig";
-import { MultiChainBalanceFetcher, EthereumConnection } from "./ethereumConnector";
+import { MultiChainBalanceFetcher, EthereumConnection } from "./ethereumConnect";
 import { PythPriceService } from "./priceFeed";
 
 export class TokenExtension {
